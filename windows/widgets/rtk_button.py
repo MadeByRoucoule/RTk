@@ -1,4 +1,5 @@
 import tkinter as tk
+
 class RTkButton():
     def __init__(self, parent, width=125, height=35, radius=25, text='Button', font=('San Francisco', 10), 
                  color='#00cc00', hover_color='#00aa00', text_color='', bg_color='', image=None, compound='left', 
@@ -83,7 +84,7 @@ class RTkButton():
             elif self.compound == 'right': 
                 self.image_posx = w - 5
             self.c.coords('btn_image', self.image_posx, self.image_posy)
-        self.c.coords('btn_text', self.width // 2, self.height // 2)
+        self.c.coords('btn_text', w // 2, h // 2)
         self.c.coords('hitbox', 0, 0, w, h)
         self.c.tag_raise('btn_image')   
         self.c.tag_raise('btn_text')
